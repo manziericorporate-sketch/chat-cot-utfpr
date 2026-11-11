@@ -3,7 +3,7 @@
 # ==============================================================================
 # Projeto Final — Arquitetura Transformer e Grandes Modelos de Linguagem (LLMs)
 # Especialização em Inteligência Artificial Generativa Aplicada — UTFPR
-# Professor: Rogério  |  Grupo: Eloi, Lucy, Winderson e Paulo
+# Professor: Rogério  |  Aluno: Paulo
 #
 # O QUE ESTE PROGRAMA FAZ
 #   Abre, no navegador, uma tela de chat (feita com Streamlit) que conversa com o
@@ -64,19 +64,19 @@ INSTRUCAO_SISTEMA = (                                                   # Abre o
 # 2. MEMÓRIA INICIAL (para o chat não abrir vazio)
 # ------------------------------------------------------------------------------
 # Esta pequena conversa já vem "carregada": aparece na tela E na memória do Gemini.
-# Por isso, mais tarde, o modelo consegue responder "quem são os alunos do grupo?".
+# Por isso, mais tarde, o modelo consegue responder "qual é o nome do aluno deste trabalho?".
 MEMORIA_INICIAL = [                                                     # Lista de mensagens que abrem a conversa
-    {                                                                   # Primeira mensagem: o grupo se apresenta
+    {                                                                   # Primeira mensagem: o aluno se apresenta
         "role": "user",                                                 # "user" = mensagem escrita pelo usuário
         "content": (                                                    # Texto da mensagem
-            "Olá! Somos o grupo formado por Eloi, Lucy, Winderson e Paulo, alunos da "  # Nomes dos alunos do grupo
+            "Olá! Eu sou o Paulo, aluno da "                                      # Nome do aluno
             "Especialização em Inteligência Artificial Generativa Aplicada da UTFPR."  # Curso e universidade
         ),                                                              # Fim do texto da mensagem
     },                                                                  # Fim da primeira mensagem
     {                                                                   # Segunda mensagem: o assistente responde e explica como funciona
         "role": "assistant",                                            # "assistant" = mensagem escrita pela IA
         "content": (                                                    # Texto da mensagem
-            "Olá, Eloi, Lucy, Winderson e Paulo! Sejam bem-vindos. 👋\n\n"  # Saudação aos quatro alunos
+            "Olá, Paulo! Seja bem-vindo. 👋\n\n"                             # Saudação ao aluno
             "Eu uso a estratégia **Encadeamento de Pensamento (Chain-of-Thought)**: "  # Nome da estratégia
             "antes de responder, monto um raciocínio passo a passo (entender, planejar, "  # Como funciona (parte 1)
             "calcular e conferir) e só depois escrevo a resposta final.\n\n"  # Como funciona (parte 2)
